@@ -1,6 +1,6 @@
 # My Code Design
 ## How to Run
-With all libraries installed, we move the taxi data and electricity data into the same folder, named taxi_data.csv and e_bound. Then do the following:
+With all libraries installed, we move the taxi data and electricity data into the same folder, named taxi_data.csv and e_bound.(Which means you need to rename the files) Then do the following:
 
     SOMETHING:my_computer$ python3 my_code.py
 
@@ -16,6 +16,7 @@ In this project, we want to utilize given NYC yellow taxi data to simulate the s
 
 09/26: We removed data that contains region with index -1, which means is not inside the 38 blocks we define
 
+09/27: Plotted the polygon regions in one figure and we figured out that there are some overlappings in some regions nearby the central parks, which is the cause of multi-region problems, and these overlapping areas matches our previous findings in Notice Appendix below. There are about 1000 ~ 2000 multi-region problems in all 349,351 datas, which reasulted in a 0.8% error rate, which matches the proportion of overlapping region and overall region.
 
 ## Notice
 09/20: Pay attention if we want to import all csv files, which have about 194M rows. Be aware of the memory usage.
@@ -75,5 +76,6 @@ For code3, we have length:
 initial data: 349351 rows
 
 pickup_region: 349351 rows
+
 
 
